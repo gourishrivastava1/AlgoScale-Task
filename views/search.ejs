@@ -1,0 +1,36 @@
+<%- include("./partials/header.ejs")%>
+
+<div class="container">
+    <div class="h2 container text-center">
+        Search results
+    </div>
+    <div class="row text-center">
+        <div class="container col-md-6 col-sm-12 text-center">
+            <form class="navbar-form navbar-left" action="/search" method="POST">
+                <div class="form-group search">
+                    <select class="form-control" name="searchvalue">
+                        <% Users.forEach(function(user){ %>
+                            <option value="<%= user.username %>""><%= user.username %></option>
+                        <% }); %>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row text-center">
+        <% foundUsers.forEach(function(user){ %>
+            <div class="col-md-2 col-sm-3" style="display: flex;flex-wrap: wrap;">
+                <div class="thumbnail usercard">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+                    <div class="caption">
+                        <h4><%= user.username %></h4>
+                    </div>
+                    <a class="btn btn-sm btn-danger" href="delete/<%=user._id%>">Delete</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include("./partials/footer.ejs")%>
