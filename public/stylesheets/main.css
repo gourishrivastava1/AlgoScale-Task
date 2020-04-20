@@ -1,0 +1,49 @@
+.panel-footer {
+    background-color: rgb(47, 94, 180);
+    position:fixed;
+   left:0px;
+   bottom:-70px;
+   width:100%;
+   transition-duration: 0.4s;
+}
+
+.panel-footer:hover{
+    bottom:0%;
+    transition-duration: 0.4s;
+}
+
+.footernote {
+    color: white;
+    font-size: x-small;
+}
+
+.social:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.social {
+    transform: scale(0.8);
+
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+    
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+/* Hover Variations */
+#social-gh,#social-em{
+    color: #ffffff;
+}
+#social-gh:hover {
+    color: #000000bc;
+}
+#social-em:hover {
+    color: #f39c12;
+}
